@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>精细训练平台</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="dataSide">
+        <div class="dataInfo">
+            <div class="dataIdName">
+                编号:<textarea class="dataId" v-model="dataId"></textarea>
+            </div>
+            <button type="button" class="changeDataById">更换数据</button>
+        </div>
+        <div class="dataText">
+            <textarea class="dataContent" v-model="dataContent"></textarea>
+        </div>
+        <div class="labelText">
+            <table class="noduleList">
+                <tbody>
+                    <td>代表位置</td>
+                    <td>恶性特征</td>
+                    <td>ACR分数</td>
+                    <td>ACR评级</td>
+                    <td>TI-RADS评级</td>
+                    <td>修改</td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="operationSide">
+        <div class="reTraining">
+            <button type="button" class="WrongReTraining">错题重训</button>
+        </div>
+        <div class="extendTest">
+            拓展查漏
+        </div>
+        <div class="contradictionCheck">
+            <div class="testSet">
+            测试集
+            </div>
+            逻辑矛盾检查
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    let singleData = {
+        dataId: 2782,
+        dataContent: '好人只有做正确的事才有好报'
+    }
+
+    let dataVue = new Vue({
+        el: '#dataSide',
+        data: singleData
+    });
+</script>
+</html>
